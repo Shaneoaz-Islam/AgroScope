@@ -1,0 +1,165 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroScope - Advanced Plant Health Analysis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="sign-up.css">
+   
+    
+</head>
+<body>
+<!--1 st page start-->
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="icons">
+            <i class="fa-solid fa-leaf" style="color: #1f5135;"></i>
+            <i class="fa-solid fa-droplet" style="color: #74C0FC;"></i>
+            <i class="fa-solid fa-sun" style="color: #FFD43B;"></i>  
+        </div>
+        <div class="tagline">Advanced Plant Health Analysis</div>
+        <h1>Identify & Solve</h1>
+        <h2>Plant Health Problems</h2>
+        <p>Upload images of your plants and soil to receive instant diagnosis and tailored solutions.</p>
+        <div class="buttons">
+            <button class="analyze">Analyze Your Plant</button>
+            <button class="how-it-works">How It Works</button>
+            
+        </div>
+        <input type="file" id="fileInput" style="display: none;">
+    </section>
+</body>
+<!--1st page end-->
+<!--second page start-->
+<body1>
+    <section>
+        
+         <div class="container" style="height: 600px;width: 1200px; background-color: white;"><br><br>
+            <h1>How It Works</h1>
+            <p>Our advanced AI technology makes plant diagnosis simple and accurate.</p>
+            
+            <div class="border-middle"></div> 
+    
+            <div class="steps">
+                <div class="step" onclick="showInfo('Upload')">
+                    <h2>📸 Upload</h2>
+                    <p>Take a clear photo of your plant,leaf or soil and upload it to our platform.</p>
+                </div>
+                <div class="step" onclick="showInfo('Analyze')">
+                    <h2>🔍 Analyze</h2>
+                    <p>Our AI technology analyzes the image to identify issues and potential problems.</p>
+                </div>
+                <div class="step" onclick="showInfo('Solution')">
+                    <h2>✅ Solution</h2>
+                    <p>Receive tailored recommendations and solutions to restore your plant's health.</p>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            function showInfo(stepName) {
+                alert("More details about: " + stepName);
+            }
+        </script>
+    
+    </section><br>
+</body1> 
+<!--second page end-->
+<body2>
+    <section>
+    <div class="container" > <br><br>
+        <h1>Upload Your Image</h1>
+        <p>Our AI will analyze your plant or soil image and provide detailed insights.</p>
+
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <div class="upload-box" id="upload-box">
+                <label for="file-input" class="upload-label"></label>
+                    <input type="file" id="file-input" name="image
+                    " accept="image/*" hidden>                
+                        <i class="fa-duotone fa-solid fa-arrow-up-from-bracket fa-bounce upload-icon" style="--fa-primary-color: #74C0FC; --fa-secondary-color: #74C0FC;"></i>
+                        <p id="file-name">Drag & drop or click to upload</p>
+                        <span>PNG, JPG or WEBP (max 10MB)</span>
+                </label>
+            </div>
+            <button type="submit">Analyze Image</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("upload-box").addEventListener("click", function () {
+            document.getElementById("file-input").click();
+        });
+
+        document.getElementById("file-input").addEventListener("change", function (event) {
+            if (event.target.files.length > 0) {
+                document.getElementById("file-name").innerText = "File Selected: " + event.target.files[0].name;
+            }
+        });
+    </script>
+    </section>
+    </body2>
+    <!--last page start-->
+    <body3>
+        <section>
+        <div class="container">
+            <div class="hero">
+        
+                <h1>Start Growing Healthier Plants Today</h1>
+                <p>Join thousands of garden enthusiasts who are using Agro Scope to identify and solve plant health issues.</p>
+            </div>
+            
+            <div class="yellow-border"></div>
+            
+            <div class="footer">
+                <div>
+                    <h2>Agro Scope</h2>
+                    <p style="color: white;">Advanced plant health analysis to help your garden thrive.</p>
+                    <a href="https://www.facebook.com/jubok.jubok.73/about">
+                        <img src="facebook.png" alt="" style="height: 18px;width: 18px;">
+                    </a>
+                    <a href="https://www.instagram.com/shaneoaz.islam/">
+    <img src="instagram.png" alt="" style="height: 20px;width: 20px;">
+                </div>
+                <div>
+                    <h2>Legal</h2>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Features</h2>
+                    <ul>
+                        <li><a href="#">Leaf Analysis</a></li>
+                        <li><a href="#">Soil Analysis </a></li>
+                        <li><a href="#">Solution Library</a></li>
+                        <li><a href="#">Plant Encyclopedia</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body3> 
+</section>
+<!--last page end-->
+</body>
+</html>
